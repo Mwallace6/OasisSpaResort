@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria;
+    line-height: 1.6;
+	font-size: 35px;
+}
+
+header, footer {
+    background-color: CCCCFF;
+    color: white;
+    padding: 10px 20px;
+	font-family: Cambria;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ccccff;
+    border-bottom: 5px solid #333;
+}
+
+.header-logo img {
+    max-width: 100%; /* Logo resizes depending on screen size */
+    height: auto; 
+    max-height: 150px; 
+}
+
+
+.nav-btn {
+    background-color: CCCCFF;
+    border: black;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 40px;
+	font-family: Cambria;
+	width: 350px;
+	height: 150px;
+	border-bottom: 5px solid #333;
+	
+	
+}
+
+.nav-btn:hover {
+    background-color: #555;
+	color: white;
+}
+
+.horizontal-nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.horizontal-nav .nav-btn {
+    margin: 0 10px;
+}
+
+
+	
+/* Main content layout */
+main {
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.top-left, .bottom-right {
+    padding: 20px;
+}
+
+.top-right, .bottom-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-1 img, .Main-2 img {
+	width: 100%;
+    max-width: 400px; 
+    height: auto;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    background-color: #ccccff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-btn {
+    background-color: #444;
+    border: none;
+    color: white;
+    font-family: Cambria, serif;
+    padding: 10px 20px;
+    font-size: 50px;
+    border-radius: 5px;
+}
+
+.footer-btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+@media (max-width: 768px) {   /*Adjustments for different screen sizes*/
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .header-logo img {
+        max-width: 80%; 
+    }
+
+    .nav-btn {
+        font-size: 30px;
+        padding: 8px 16px;
+    }
+
+    footer {
+        flex-direction: column; 
+        padding: 10px;
+    }
+
+    .footer-btn {
+        width: 90%; 
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {   /*Adjustments for different screen sizes*/
+    .header-logo img {
+        max-width: 100%; 
+    }
+
+    .nav-btn {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    .footer-btn {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+/*rooms page*/
+.rooms-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+/* Sort Dropdown */
+.sort-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sort-container label {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.sort-container select {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+}
+
+.sort-container select:hover {
+    border-color: #999;
+}
+
+.sort-container select:focus {
+    outline: none;
+    border-color: #4169e1;
+    box-shadow: 0 0 5px rgba(65, 105, 225, 0.5);
+}
+.room {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    gap: 20px;
+}
+
+.room-image {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.room-info {
+    flex: 1;
+}
+
+.book-now {
+    display: inline-block;
+    padding: 40px 80px;
+    background-color: #4169e1; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: #FFB6C1;
+}
+/*Spa page*/
+.spa-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.treatment {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    gap: 20px;
+}
+
+.treatment-image {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.treatment-info {
+    flex: 1;
+}
+
+.book-now {
+    display: inline-block;
+    padding: 40px 80px;
+    background-color: #4169e1; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: #FFB6C1; 
+}
+
+}
+/* About us */
+.about-us-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.about-description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-description h1 {
+    font-size: 50px;
+    color: #333;
+}
+
+.about-description p {
+    font-size: 28px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+/* Room Pages */
+.room-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.room-image {
+    width: 100%; 
+    margin: 0;   
+    padding: 0;  
+}
+
+.room-image img {
+    width: 100%;   
+    height: auto;  
+    display: block; 
+}
+
+.room-description {
+    margin-top: 20px;
+    font-size: 30px;  
+    line-height: 1.8; 
+    color: #555;
+    margin-bottom: 30px;  
+    width: 95%;  
+    max-width: 1200px;  
+    padding: 0 20px;  
+}
+
+.book-now {
+    display: inline-block;
+    padding: 40px 80px;
+    background-color: #4169e1; 
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 20px;  
+}
+
+.book-now:hover {
+    background-color: #FFB6C1;
+    text-decoration: none; 
+    color: white; 
+}
+/*dining page*/
+.dining-page {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.dining-images {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dining-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-section {
+    width: 70%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h3 {
+    font-size: 48px; 
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.menu-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-category li {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Events Page Layout */
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.event1-description, .event2-description {
+    width: 45%;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.event1-image, .event2-image {
+    width: 45%;
+}
+
+.event1-image img, .event2-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.event1-description h2, .event2-description h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/*offers page*/
+.offers-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.offer {
+    width: 48%; 
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.offer-description {
+    flex: 1;
+}
+
+.offer-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4169e1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.view-button:hover {
+    background-color: #FFB6C1;
+    color: white;
+}
+
+/* Spa Pages */
+.spa-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.treatment-image {
+    width: 100%; 
+    margin: 0;   
+    padding: 0;  
+}
+
+.treatment-image img {
+    width: 100%;   
+    height: auto;  
+    display: block; 
+}
+
+.treatment-description {
+    margin-top: 20px;
+    font-size: 30px;  
+    line-height: 1.8; 
+    color: #555;
+    margin-bottom: 30px;  
+    width: 95%;  
+    max-width: 1200px;  
+    padding: 0 20px;  
+}
+
+.book-now {
+    display: inline-block;
+    padding: 40px 80px;
+    background-color: #4169e1; 
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 20px;  
+}
+
+.book-now:hover {
+    background-color: #FFB6C1;
+    text-decoration: none; 
+    color: white; 
+}
+
+/* Contact Page Layout */
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left Section - Contact Images */
+.contact-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.contact-icon {
+    width: 100%;  
+    height: auto;
+    max-width: 250px; /* Control size of images */
+    margin-bottom: 30px;
+}
+
+/* Right Section - Contact Info */
+.contact-info {
+    width: 60%;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+

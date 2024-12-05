@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--Mark Wallace Oasis Website-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OasisSpaResort</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <button class="nav-btn">
+                <a href="home.html" style="text-decoration: none; color: inherit;">Home</a>
+            </button>
+        </div>
+        <div class="header-logo">
+            <img src="photos/logo.jpg" alt="Logo" width="800" height="200"/>   
+        </div>
+        <div class="header-right">
+            <button class="nav-btn">
+                <a href="about.html" style="text-decoration: none; color: inherit;">About Us</a>
+            </button>
+        </div>
+    </header>
+	
+	    <!-- Horizontal Row of Buttons -->
+    <nav class="horizontal-nav">
+        <button class="nav-btn">
+            <a href="rooms.html" style="text-decoration: none; color: inherit;">Rooms</a>
+        </button>
+        <button class="nav-btn">
+            <a href="spa.html" style="text-decoration: none; color: inherit;">Spa</a>
+        </button>
+        <button class="nav-btn">
+            <a href="dining.html" style="text-decoration: none; color: inherit;">Dining</a>
+        </button>
+        <button class="nav-btn">
+            <a href="events.html" style="text-decoration: none; color: inherit;">Events</a>
+        </button>
+        <button class="nav-btn">
+            <a href="offers.html" style="text-decoration: none; color: inherit;">Offers</a>
+        </button>
+    </nav>
+	
+	
+	<!-- Main Content -->
+	
+<div class="spa-page">
+
+    <!-- Sort Dropdown -->
+		<div class="sort-container">
+			<label for="spa-sort">Sort by Price:</label>
+			<select id="spa-sort" onchange="sortSpaTreatments()">
+		<option value="default">Default</option>
+		<option value="low-to-high">Price (Low to High)</option>
+		<option value="high-to-low">Price (High to Low)</option>
+	</select>
+
+    </div>
+
+    <!-- Spa Treatments Container -->
+    <div id="spa-treatments-container">
+        <div class="treatment" data-price="35">
+            <img src="Photos/Spa1.jpg" alt="Relaxing Massage" width="800" />
+            <div class="treatment-info">
+                <h2>Relaxing Massage - £35</h2>
+                <p>Relax and unwind with our expert massage therapy, designed to relieve stress and rejuvenate your body and mind.</p>
+                <a href="Spa1.html" class="book-now">Book Now</a>
+            </div>
+        </div>
+
+        <div class="treatment" data-price="50">
+            <img src="Photos/Spa2.jpg" alt="Luxury Facial" width="800" />
+            <div class="treatment-info">
+                <h2>Luxury Facial - £50</h2>
+                <p>Pamper your skin with our luxurious facial treatments, tailored to nourish and enhance your natural glow.</p>
+                <a href="Spa2.html" class="book-now">Book Now</a>
+            </div>
+        </div>
+
+        <div class="treatment" data-price="75">
+            <img src="Photos/Spa3.jpg" alt="Full Body Wrap" width="800" />
+            <div class="treatment-info">
+                <h2>Full Body Wrap - £75</h2>
+                <p>Indulge in our full-body treatments, including scrubs and wraps, for a complete revitalization experience.</p>
+                <a href="Spa3.html" class="book-now">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+	<!-- Footer -->
+    <footer>
+        <button class="footer-btn">
+            <a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
